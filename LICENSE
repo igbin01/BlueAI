@@ -1,21 +1,34 @@
-MIT License
+🛡️ SentraBlueAI - AI-Powered Cyber Defense Platform
 
-Copyright (c) 2025 Red-Team Beast
+Status: MVP Phase 1 | Version: 1.0  
+Author: Igbinedion Victor 
+License: MIT
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+🔍 Project Overview
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+SentraBlueAI is an AI-enhanced Blue Team platform built to detect, analyze, and respond to cyber threats in real time. It leverages machine learning, stream processing, and endpoint telemetry to reduce alert fatigue and accelerate threat response across enterprise environments.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+🎯 Objectives
+
+- Reduce Mean Time to Detect (MTTD) and Mean Time to Respond (MTTR)
+- Automatically surface suspicious behavior using unsupervised AI
+- Provide human-readable alerts, threat scores, and behavior breakdowns
+- Support both Windows and Linux endpoints with zero friction
+
+🔧 MVP Scope
+
+- Endpoint telemetry agent (`SentraAgent`)
+- Ingestion API and message queue (`SentraGateway`)
+- AI Engine for anomaly detection (`SentraBrain`)
+- UI Dashboard for live alerts and threat scores (`SentraView`)
+- PostgreSQL, MinIO/S3, Kafka-based backend
+
+---
+🧱 System Architecture
+
+```text
+[SentraAgent] ---> [SentraGateway] ---> [Kafka Stream] ---> [SentraBrain]
+                                             |                     |
+                                        [DB + MinIO]        [Threat Scoring]
+                                                                    |
+                                                            [SentraView UI]
