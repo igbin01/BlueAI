@@ -1,0 +1,14 @@
+# Commit message format:
+# <type>[optional scope]: <description>
+#
+# Types:
+#   feat     - new feature
+#   fix      - bug fix
+#   docs     - documentation change
+#   style    - formatting, no code change
+#   refactor - code change that is neither fix nor feature
+#   test     - adding or fixing tests
+#   chore    - maintenance tasks
+#
+# Example:
+# feat(auth): add OAuth2 login support
